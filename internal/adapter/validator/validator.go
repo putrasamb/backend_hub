@@ -3,7 +3,7 @@ package validator
 import (
 	"fmt"
 
-	model "service-collection/internal/adapter/validator/model"
+	model "backend_hub/internal/adapter/validator/model"
 
 	"github.com/go-playground/validator/v10"
 )

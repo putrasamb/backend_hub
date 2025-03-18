@@ -3,7 +3,7 @@ package model
 import (
 	"encoding/json"
 
-	model "service-collection/internal/adapter/http/model/response"
+	model "backend_hub/internal/adapter/http/model/response"
 )
 
 type ValidationError struct {

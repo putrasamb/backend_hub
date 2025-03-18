@@ -1,11 +1,11 @@
 package controller
 
 import (
+	"backend_hub/internal/adapter/validator"
+	"backend_hub/internal/infrastructure/logger"
+	"backend_hub/internal/usecase"
+	httpresponse "backend_hub/pkg/common/http/response"
 	"net/http"
-	"service-collection/internal/adapter/validator"
-	"service-collection/internal/infrastructure/logger"
-	"service-collection/internal/usecase"
-	httpresponse "service-collection/pkg/common/http/response"
 
 	"github.com/labstack/echo/v4"
 )

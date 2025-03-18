@@ -1,7 +1,7 @@
 package config
 
 import (
-	"service-collection/pkg/constant"
+	"backend_hub/pkg/constant"
 
 	"github.com/spf13/viper"
 )

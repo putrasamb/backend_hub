@@ -1,7 +1,7 @@
 package httproute
 
 import (
-	"service-collection/internal/adapter/http/controller"
+	"backend_hub/internal/adapter/http/controller"
 
 	"github.com/labstack/echo/v4"
 )

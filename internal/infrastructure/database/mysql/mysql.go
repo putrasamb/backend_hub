@@ -1,9 +1,9 @@
 package mysql
 
 import (
+	util "backend_hub/pkg/common/util/formatter"
 	"database/sql"
 	"fmt"
-	util "service-collection/pkg/common/util/formatter"
 	"time"
 
 	"gorm.io/driver/mysql"

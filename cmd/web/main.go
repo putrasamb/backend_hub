@@ -11,10 +11,10 @@ import (
 
 	"github.com/labstack/echo/v4/middleware"
 
-	"service-collection/config"
-	"service-collection/internal/adapter/validator"
-	"service-collection/internal/infrastructure/database"
-	"service-collection/pkg/constant"
+	"backend_hub/config"
+	"backend_hub/internal/adapter/validator"
+	"backend_hub/internal/infrastructure/database"
+	"backend_hub/pkg/constant"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/gommon/log"

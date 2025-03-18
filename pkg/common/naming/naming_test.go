@@ -1,8 +1,8 @@
 package naming_test
 
 import (
+	"backend_hub/pkg/common/naming"
 	"fmt"
-	"service-collection/pkg/common/naming"
 	"testing"
 	"time"
 

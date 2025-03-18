@@ -1,8 +1,8 @@
 package scheduler
 
 import (
+	"backend_hub/internal/infrastructure/logger"
 	"errors"
-	"service-collection/internal/infrastructure/logger"
 	"sync"
 	"time"
 

@@ -1,11 +1,11 @@
 package repository
 
 import (
+	"backend_hub/internal/domain/model/entity"
+	"backend_hub/internal/infrastructure/database"
+	"backend_hub/internal/infrastructure/logger"
+	httprequest "backend_hub/pkg/common/http/request"
 	"fmt"
-	"service-collection/internal/domain/model/entity"
-	"service-collection/internal/infrastructure/database"
-	"service-collection/internal/infrastructure/logger"
-	httprequest "service-collection/pkg/common/http/request"
 
 	"gorm.io/gorm"
 )

@@ -1,10 +1,10 @@
 package usecase
 
 import (
+	"backend_hub/internal/infrastructure/logger"
+	httpresponse "backend_hub/pkg/common/http/response"
 	"fmt"
 	"net/http"
-	"service-collection/internal/infrastructure/logger"
-	httpresponse "service-collection/pkg/common/http/response"
 )
 
 type HealthCheckUseCase struct {

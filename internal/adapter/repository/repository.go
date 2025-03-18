@@ -3,7 +3,7 @@ package repository
 import (
 	"context"
 
-	"service-collection/internal/infrastructure/database"
+	"backend_hub/internal/infrastructure/database"
 
 	"gorm.io/gorm"
 )

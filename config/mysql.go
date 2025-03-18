@@ -3,9 +3,9 @@ package config
 import (
 	"time"
 
-	"service-collection/internal/infrastructure/database"
-	"service-collection/internal/infrastructure/database/mysql"
-	"service-collection/pkg/constant"
+	"backend_hub/internal/infrastructure/database"
+	"backend_hub/internal/infrastructure/database/mysql"
+	"backend_hub/pkg/constant"
 
 	"github.com/spf13/viper"
 	"gorm.io/gorm"

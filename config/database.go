@@ -1,7 +1,7 @@
 package config
 
 import (
-	"service-collection/internal/infrastructure/database"
+	"backend_hub/internal/infrastructure/database"
 
 	"github.com/spf13/viper"
 )

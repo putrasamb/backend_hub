@@ -1,13 +1,13 @@
 package config
 
 import (
-	httproute "service-collection/internal/adapter/http"
-	"service-collection/internal/adapter/http/controller"
-	"service-collection/internal/adapter/repository"
-	"service-collection/internal/adapter/validator"
-	"service-collection/internal/infrastructure/database"
-	"service-collection/internal/infrastructure/logger"
-	"service-collection/internal/usecase"
+	httproute "backend_hub/internal/adapter/http"
+	"backend_hub/internal/adapter/http/controller"
+	"backend_hub/internal/adapter/repository"
+	"backend_hub/internal/adapter/validator"
+	"backend_hub/internal/infrastructure/database"
+	"backend_hub/internal/infrastructure/logger"
+	"backend_hub/internal/usecase"
 
 	"github.com/fsnotify/fsnotify"
 	"github.com/labstack/echo/v4"

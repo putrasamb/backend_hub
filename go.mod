@@ -1,4 +1,4 @@
-module service-collection 
+module backend_hub
 
 go 1.22.9
 

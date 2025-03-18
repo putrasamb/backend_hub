@@ -1,14 +1,14 @@
 package usecase
 
 import (
-	"service-collection/internal/adapter/converter"
-	"service-collection/internal/adapter/dto/response"
-	"service-collection/internal/adapter/repository"
-	"service-collection/internal/adapter/validator"
-	"service-collection/internal/domain/model/entity"
-	"service-collection/internal/infrastructure/logger"
-	httprequest "service-collection/pkg/common/http/request"
-	httpresponse "service-collection/pkg/common/http/response"
+	"backend_hub/internal/adapter/converter"
+	"backend_hub/internal/adapter/dto/response"
+	"backend_hub/internal/adapter/repository"
+	"backend_hub/internal/adapter/validator"
+	"backend_hub/internal/domain/model/entity"
+	"backend_hub/internal/infrastructure/logger"
+	httprequest "backend_hub/pkg/common/http/request"
+	httpresponse "backend_hub/pkg/common/http/response"
 
 	"github.com/pkg/errors"
 )

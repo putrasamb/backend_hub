@@ -1,8 +1,8 @@
 package config
 
 import (
-	"service-collection/internal/infrastructure/database"
-	"service-collection/internal/infrastructure/logger"
+	"backend_hub/internal/infrastructure/database"
+	"backend_hub/internal/infrastructure/logger"
 
 	"github.com/go-co-op/gocron/v2"
 	"github.com/spf13/viper"

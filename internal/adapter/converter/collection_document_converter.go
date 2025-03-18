@@ -1,8 +1,8 @@
 package converter
 
 import (
-	"service-collection/internal/adapter/dto/response"
-	"service-collection/internal/domain/model/entity"
+	"backend_hub/internal/adapter/dto/response"
+	"backend_hub/internal/domain/model/entity"
 )
 
 func ConvertCollectionDocumentResponse(data *entity.CollectionDocument) *response.CollectionDocument {

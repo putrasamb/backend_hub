@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	"service-collection/internal/adapter/validator"
-	"service-collection/internal/infrastructure/logger"
-	httprequestmodel "service-collection/pkg/common/http/request/model"
+	"backend_hub/internal/adapter/validator"
+	"backend_hub/internal/infrastructure/logger"
+	httprequestmodel "backend_hub/pkg/common/http/request/model"
 
 	"github.com/labstack/echo/v4"
 )

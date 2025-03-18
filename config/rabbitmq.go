@@ -3,8 +3,8 @@ package config
 import (
 	"crypto/tls"
 
-	"service-collection/internal/infrastructure/logger"
-	"service-collection/internal/infrastructure/messaging/rabbitmq"
+	"backend_hub/internal/infrastructure/logger"
+	"backend_hub/internal/infrastructure/messaging/rabbitmq"
 
 	"github.com/spf13/viper"
 )

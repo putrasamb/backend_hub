@@ -1,12 +1,12 @@
 package main
 
 import (
+	"backend_hub/config"
+	"backend_hub/internal/infrastructure/scheduler"
+	"backend_hub/pkg/constant"
 	"context"
 	"os"
 	"os/signal"
-	"service-collection/config"
-	"service-collection/internal/infrastructure/scheduler"
-	"service-collection/pkg/constant"
 
 	"github.com/labstack/gommon/log"
 	"github.com/pkg/errors"

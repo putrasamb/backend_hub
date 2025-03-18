@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"service-collection/internal/infrastructure/logger"
+	"backend_hub/internal/infrastructure/logger"
 
 	amqp "github.com/rabbitmq/amqp091-go"
 )
