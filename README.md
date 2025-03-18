@@ -1,4 +1,4 @@
-# Service Sales Order
+# Backend Hub
 
 A high-performance and scalable service for managing sales orders, developed in Go (Golang) with the Echo framework and
 MariaDB.
