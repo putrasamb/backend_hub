@@ -1,0 +1,8 @@
+services:
+  master:
+    image: master:latest
+    container_name: service-master
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - .env

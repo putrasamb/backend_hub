@@ -1,0 +1,11 @@
+api/
+public/logs
+**/.env
+**/.env.example
+**/.DS_Store
+docker-compose.yml
+Dockerfile
+**/.air.toml
+.idea/
+.vscode/
+**/public/logs

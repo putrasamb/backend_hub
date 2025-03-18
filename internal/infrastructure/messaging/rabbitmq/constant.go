@@ -1,0 +1,13 @@
+package rabbitmq
+
+const (
+	// RabbitMQ
+	RABBITMQ_HOST                   string = "RABBITMQ_HOST"
+	RABBITMQ_PORT                   string = "RABBITMQ_PORT"
+	RABBITMQ_USER                   string = "RABBITMQ_USER"
+	RABBITMQ_PASSWORD               string = "RABBITMQ_PASSWORD"
+	RABBITMQ_VHOST                  string = "RABBITMQ_VHOST"
+	RABBITMQ_HEARTBEAT_INTERVAL     string = "RABBITMQ_HEARTBEAT_INTERVAL"
+	RABBITMQ_RETRY_CONNECT_INTERVAL string = "RABBITMQ_RETRY_CONNECT_INTERVAL"
+	RABBITMQ_MAX_RETRY_CONNECT      string = "RABBITMQ_MAX_RETRY_CONNECT"
+)
