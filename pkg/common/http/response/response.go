@@ -11,7 +11,6 @@ type EchoResponse struct{}
 type Response struct {
 	Code    int    `json:"code,omitempty"`
 	Message string `json:"message,omitempty"`
-	
 }
 
 type ErrorResponse struct {
@@ -36,18 +35,35 @@ func (r *PaginatedReponse[T]) EchoJsonResponse(c echo.Context) error {
 	return c.JSON(http.StatusOK, r)
 }
 
-func (r *DataResponse[T]) EchoJsonResponse(c echo.Context) error {
-	return c.JSON(http.StatusOK, r)
-}
-
-func (r *DataResponse[T]) EchoJsonResponseWithCodeMessage(c echo.Context) error {
-	return c.JSON(r.Code, r)
-}
-
 func (r *ErrorResponse) EchoJsonResponse(c echo.Context) error {
 	return c.JSON(r.Code, r)
 }
 
 func (r *Response) EchoJsonResponse(c echo.Context) error {
 	return c.JSON(r.Code, r)
+}
+
+func (r *Response) Error() string {
+	return r.Message
+}
+
+func (r *Response) GetStatusCode() int {
+	return r.Code
+}
+
+func NewHTTPError(code int, message string) error {
+	return &Response{
+		Code:    code,
+		Message: message,
+	}
+}
+
+func NewErrorResponse(code int, message string, err error) *ErrorResponse {
+	return &ErrorResponse{
+		Response: Response{
+			Code:    code,
+			Message: message,
+		},
+		Error: err.Error(),
+	}
 }
