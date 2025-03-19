@@ -77,6 +77,23 @@ func (r *ProductRepository) applySortScope(request httprequest.FilteredRequestIn
 	}
 }
 
+func (r *ProductRepository) ListTotal(request *httprequest.ListRequest, count *int64) error {
+	trx := r.getTransaction(r.DB.Read)
+	defer trx.Rollback()
+	if err := trx.Model(&entity.Product{}).
+		Scopes(
+			r.applyFilterScope(request),
+			r.applySortScope(request),
+		).Count(count).Error; err != nil {
+		return err
+	}
+	if err := trx.Commit().Error; err != nil {
+		r.logError(err, "failed while committing get list data")
+		return err
+	}
+	return nil
+}
+
 // Create creates a new product
 func (r *ProductRepository) Create(product *entity.Product) error {
 	trx := r.getTransaction(r.DB.Write)
