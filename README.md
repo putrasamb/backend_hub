@@ -18,8 +18,8 @@ To set up and run this service, ensure the following dependencies are installed:
 Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/SAMBPLG/service-sales-order.git
-cd service-sales-order
+git clone https://github.com/putrasamb/backend_hub.git
+cd backend_hub
 
 ```
 
