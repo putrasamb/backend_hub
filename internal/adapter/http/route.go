@@ -11,7 +11,7 @@ type Route struct {
 	HealthCheckController *controller.HealthCheckController
 	LogController         *controller.LogController
 	TesController         *controller.TesController
-	CollectionDocument    *controller.CollectionDocumentController
+	WarehouseController   *controller.WarehouseController
 }
 
 func (r *Route) Setup() {
@@ -30,8 +30,20 @@ func (r *Route) setupTes() {
 }
 
 func (r *Route) SetupCollectionDocument() {
-	collection := r.App.Group("/v1")
+	warehouse := r.App.Group("/v1/warehouse")
 
-	collection.GET("/collection-documents", r.CollectionDocument.List)
-	collection.GET("/collection-documents/", r.CollectionDocument.List)
+	warehouse.GET("/collection-documents", r.WarehouseController.List)
+	warehouse.GET("/collection-documents/", r.WarehouseController.List)
+
+	warehouse.POST("/collection-documents", r.WarehouseController.Create)
+	warehouse.POST("/collection-documents/", r.WarehouseController.Create)
+
+	warehouse.GET("/collection-documents/:id", r.WarehouseController.Get)
+	warehouse.GET("/collection-documents/:id/", r.WarehouseController.Get)
+
+	warehouse.PUT("/collection-documents/:id", r.WarehouseController.Update)
+	warehouse.PUT("/collection-documents/:id/", r.WarehouseController.Update)
+
+	warehouse.DELETE("/collection-documents/:id", r.WarehouseController.Delete)
+	warehouse.DELETE("/collection-documents/:id/", r.WarehouseController.Delete)
 }

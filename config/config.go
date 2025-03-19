@@ -45,8 +45,7 @@ func Bootstrap(config *BootstrapConfig) error {
 	// repo := repository.NewRepository(config.DB)
 	// trxRepo := repository.NewTransactionRepositoryImplementation(config.DB.Write)
 	tesRepositoory := repository.NewRepositoryTes(config.Logger, config.DB)
-	collectionDocumentRepository := repository.NewRepositoryCollectionDocument(config.Logger, config.DB)
-
+	warehouseRepository := repository.NewProductRepository(config.Logger, config.DB)
 	// use this fpr repo and trxRepo
 
 	// Init usecases
@@ -54,20 +53,23 @@ func Bootstrap(config *BootstrapConfig) error {
 		config.Logger,
 	)
 	tesUseCase := usecase.NewUseCaseTes(config.Logger, config.Validator, tesRepositoory)
-	collectionDocumentUseCase := usecase.NewUseCaseCollectionDocuments(config.Logger, config.Validator, collectionDocumentRepository)
-
+	warehouseUsecase := usecase.NewWarehouseUseCase(
+		config.Logger,
+		config.Validator,
+		warehouseRepository,
+	)
 	// Init Controller
 	healtcheckController := controller.NewHealthCheckController(config.Logger, healtcheckUseCase)
 	logController := controller.NewLogController(config.Logger, config.Validator)
 	tesController := controller.NewTesController(config.Logger, config.Validator, tesUseCase)
-	collectionDocumentController := controller.NewCollectionDocumentController(config.Logger, config.Validator, collectionDocumentUseCase)
+	warehouseControler := controller.NewWarehouseController(config.Logger, warehouseUsecase)
 
 	route := httproute.Route{
 		App:                   config.App,
 		HealthCheckController: healtcheckController,
 		LogController:         logController,
 		TesController:         tesController,
-		CollectionDocument:    collectionDocumentController,
+		WarehouseController:   warehouseControler,
 	}
 
 	route.Setup()
